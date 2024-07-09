@@ -1,0 +1,18 @@
+
+
+###
+POST http://localhost:3333/trips
+Content-Type: application/json 
+
+{
+   "destination": "Belo Horizonte",
+    "starts_at": "2024-07-17T18:00:00",
+    "ends_at": "2024-07-28T18:00:00",
+    "owner_name": "Yuri Takamisawa",
+    "owner_email": "yuri@gmail.com",
+    "emails_to_invite": [
+        "diogo@gmail.com",
+        "jon@gmail.com"
+    ]
+    
+}
