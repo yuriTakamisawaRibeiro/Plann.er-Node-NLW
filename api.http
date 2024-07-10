@@ -1,18 +1,59 @@
 
-
+// create-trip
 ###
 POST http://localhost:3333/trips
 Content-Type: application/json 
 
 {
-   "destination": "Belo Horizonte",
-    "starts_at": "2024-07-17T18:00:00",
-    "ends_at": "2024-07-28T18:00:00",
+   "destination": "Recife",
+    "starts_at": "2024-08-06T18:00:00",
+    "ends_at": "2024-08-15T18:00:00",
     "owner_name": "Yuri Takamisawa",
     "owner_email": "yuri@gmail.com",
     "emails_to_invite": [
-        "diogo@gmail.com",
-        "jon@gmail.com"
+        "Amanda@gmail.com"
     ]
     
 }
+
+
+// confirm-trip
+###
+GET http://localhost:3333/trips/048782e7-90af-400f-9ac0-d6834bcc1001/confirm
+
+
+
+// confirm-participant
+###
+GET http://localhost:3333/participants/5d504eaa-7a56-46c1-bc35-267c4b6f3a47/confirm
+
+
+// create-activity
+###
+POST  http://localhost:3333/trips/048782e7-90af-400f-9ac0-d6834bcc1001/activities
+Content-Type: application/json 
+
+{
+    "title": "Surfar",
+    "occurs_at": "2024-08-09T12:00:00"
+}
+
+
+// get-activities
+###
+GET http://localhost:3333/trips/048782e7-90af-400f-9ac0-d6834bcc1001/activities
+
+
+// create-link
+###
+POST  http://localhost:3333/trips/048782e7-90af-400f-9ac0-d6834bcc1001/links
+Content-Type: application/json 
+
+{
+    "title": "Reserva AirBnB",
+    "url": "https://airbnb.com/reserva"
+}
+
+// get-links
+###
+GET http://localhost:3333/trips/048782e7-90af-400f-9ac0-d6834bcc1001/links
