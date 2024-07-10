@@ -57,3 +57,38 @@ Content-Type: application/json
 // get-links
 ###
 GET http://localhost:3333/trips/048782e7-90af-400f-9ac0-d6834bcc1001/links
+
+// get-participants
+###
+GET http://localhost:3333/trips/048782e7-90af-400f-9ac0-d6834bcc1001/participants
+
+// get-participant
+###
+GET http://localhost:3333/participants/d00646da-1c5d-4688-be7a-11321cd61253
+
+
+// create-invite
+###
+POST  http://localhost:3333/trips/048782e7-90af-400f-9ac0-d6834bcc1001/invites
+Content-Type: application/json 
+
+{   
+    "name": "",
+    "email": "amanda3@gmail.com"
+}
+
+
+// update-trip
+###
+PUT http://localhost:3333/trips/048782e7-90af-400f-9ac0-d6834bcc1001
+Content-Type: application/json 
+
+{
+   "destination": "Japão",
+   "starts_at": "2024-08-06T18:00:00",
+   "ends_at": "2024-08-12T18:00:00"
+}
+
+// get-trip-details
+###
+GET http://localhost:3333/trips/048782e7-90af-400f-9ac0-d6834bcc1001
