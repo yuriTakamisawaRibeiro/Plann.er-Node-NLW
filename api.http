@@ -11,7 +11,9 @@ Content-Type: application/json
     "owner_name": "Yuri Takamisawa",
     "owner_email": "yuri@gmail.com",
     "emails_to_invite": [
-        "Amanda@gmail.com"
+        "Amanda@gmail.com",
+        "Diego@gmail.com",
+        "João@gmail.com"
     ]
     
 }
