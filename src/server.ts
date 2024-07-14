@@ -18,9 +18,9 @@ import { getTripDetails } from "./routes/get-trip-details";
 import { getParticipant } from "./routes/get-participant";
 import { errorHandler } from "./error-handler";
 import { env } from "./env";
+
 const app = fastify();
 
-require('dotenv').config()
 app.register(cors, {
   origin: "*",
 });

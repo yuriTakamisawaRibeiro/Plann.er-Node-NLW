@@ -15,16 +15,18 @@ export async function getActivity(app: FastifyInstance) {
         }),
       },
     },
-    async (request) => {
+    async (request, reply) => {
       const { tripId } = request.params;
 
       const trip = await prisma.trip.findUnique({
         where: { id: tripId },
-        include: { activities: {
+        include: { 
+          activities: {
             orderBy: {
-                occurs_at: 'asc'
+              occurs_at: 'asc'
             }
-        } },
+          } 
+        },
       });
 
       if (!trip) {
@@ -41,14 +43,14 @@ export async function getActivity(app: FastifyInstance) {
       }).map((_, index) => {
         const date = dayjs(trip.starts_at).add(index, "days");
         return {
-          date: date.toDate(),
+          date: date.toISOString(),
           activities: trip.activities.filter((activity) => {
             return dayjs(activity.occurs_at).isSame(date, "day");
           }),
         };
       });
 
-      return activities;
+      return reply.send({ activities });
     }
   );
 }
