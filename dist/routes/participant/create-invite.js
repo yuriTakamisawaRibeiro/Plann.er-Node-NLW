@@ -71,6 +71,8 @@ var ClientError = class extends Error {
 
 // src/env.ts
 var import_zod = require("zod");
+var import_dotenv = __toESM(require("dotenv"));
+import_dotenv.default.config();
 var envSchema = import_zod.z.object({
   DATABASE_URL: import_zod.z.string().url(),
   API_BASE_URL: import_zod.z.string().url(),
