@@ -5,16 +5,16 @@ import {
   validatorCompiler,
 } from "fastify-type-provider-zod";
 import { confirmParticipant } from "./routes/participant/confirm-participant";
-import { confirmTrip } from "./routes/trip/confirm-trip";
+import { confirmTrip } from "./routes/trip/confirm-trip"; 
 import { createAcitivity } from "./routes/activity/create-activity";
 import { createTrip } from "./routes/trip/create-trip";
 import { getActivity } from "./routes/activity/get-activities";
-import { createLink } from "./routes/link/create-link";
+import { createLink } from "./routes/link/create-link"; 
 import { getLinks } from "./routes/link/get-links";
 import { getParticipants } from "./routes/participant/get-participants";
 import { createInvite } from "./routes/participant/create-invite";
 import { updateTrip } from "./routes/trip/update-trip";
-import { getTripDetails } from "./routes/trip/get-trip-details";
+import { getTripDetails } from "./routes/trip/get-trip-details"; 
 import { getParticipant } from "./routes/participant/get-participant";
 import { errorHandler } from "./error-handler";
 import { env } from "./env";
@@ -47,11 +47,13 @@ app.register(getLinks);
 app.register(createInvite);
 app.register(updateTrip);
 
-app
-  .listen({
-    host: "0.0.0.0",
-    port: 3333,
-  })
-  .then(() => {
-    console.log("Server running");
-  });
+
+
+app.listen({ 
+  host: '0.0.0.0',  
+  port: env.PORT,
+   
+  
+}).then(() => {
+  console.log("Server running");
+});
