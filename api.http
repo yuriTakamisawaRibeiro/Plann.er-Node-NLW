@@ -94,3 +94,8 @@ Content-Type: application/json
 // get-trip-details
 ###
 GET http://localhost:3333/trips/048782e7-90af-400f-9ac0-d6834bcc1001
+
+
+// delete-link
+###
+DELETE http://localhost:3333/links/b65ec474-2e05-47d5-92dc-8e2fe8490e6e
