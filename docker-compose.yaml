@@ -1,10 +1,10 @@
 
-
 services:
   db:
-    image: mysql:8.0.30-debian
+    image: postgres 
     environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=nestjs
+      POSTGRES_USER: root 
+      POSTGRES_PASSWORD: root 
+      POSTGRES_DB: nodedeploy 
     ports:
-      - 3306:3306
+      - "5432:5432" 
