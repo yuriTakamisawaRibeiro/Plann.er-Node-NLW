@@ -753,6 +753,9 @@ app.register(deleteLinks);
 app.register(getLinks);
 app.register(createInvite);
 app.register(updateTrip);
-app.listen({ port: env.PORT }).then(() => {
+app.listen({
+  host: "0.0.0.0",
+  port: env.PORT
+}).then(() => {
   console.log("Server running");
 });
